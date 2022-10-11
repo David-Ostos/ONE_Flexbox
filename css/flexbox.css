@@ -1,0 +1,19 @@
+.headerPrincipal .container{
+
+    display: flex;
+    align-items: center; /*para alinear los intens en flex*/
+    justify-content: space-between; /* "space-between" significa espacios entre */
+}
+/*
+.headerPrincipal-titulo{
+
+    display: inline-block;
+    vertical-align: middle; /* alinear al medio*//*
+}
+
+.headerPrincipal-nav{
+
+    display: inline-block;
+    vertical-align: middle;
+}*/
+
