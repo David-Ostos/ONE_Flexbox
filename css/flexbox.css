@@ -21,3 +21,28 @@
 
     display: flex;
 }
+
+.rodapePrincipal-patrocinadores .container{
+
+display:flex;
+justify-content: space-between;
+}
+
+.rodapePrincipal-patrocinadores-list{
+
+    display: flex;
+    align-items: center;/* se utiliza paracentrar los elementos*/
+    justify-content: space-around;/* "around" es para jsutificar el espacio alrededor de los items la diferencia entre between es que es que comienza desde los bordes y "around mantiene el espacio igual de todos los angulos */
+    width: 70%; /*aqui se coloco el espacio de la parte de los patrocianntes para poder proporcionar su espacio y quede separado en este caso porque hay 2 elementos en la misma linea*/
+    margin: 0 5% 0 0; /* se coloca el margen para la separacion entre elementos*/
+}
+
+.rodapePrincipal-contatoForm{
+
+    width: 25%; /*este es el espacio faltante para la totalidad del 100% referente con el anterior elemento*/
+}
+
+.rodapePrincipal-contatoForm-fieldset{
+
+    display: flex;/* aqui se utilizo para poder poner el boton de enviar delado de la barra buscadora*/
+}
