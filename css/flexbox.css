@@ -21,15 +21,30 @@
 
     display: flex;
 }
-/*
+.contenidoPrincipal-cursos{
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+}
+
+.contenidoPrincipal-cursos-link{
+
+    display: flex;
+    width: 23%;
+   
+}
+
+
 .rodapePrincipal-navMap-list{
 
     display: flex;
-    flex-direction: column; /*con la fumcion "flex-direction" se optiene la direccion en la que va a ir los elementos si es en columnas o filas, entre otros... en este caso se utilizo "column" para que esten una debajo de la otra
-    height: 255px; /*se coloca un alto establecido para poder delimitar el elemento a ese espacio 
-    flex-wrap: wrap;/*y con "wrap" se logra que despues de llegar al espacio establecido, se quiebre la columna en este caso, y la continue en la siguiente seccion *//*
+    flex-direction: column; /*con la fumcion "flex-direction" se optiene la direccion en la que va a ir los elementos si es en columnas o filas, entre otros... en este caso se utilizo "column" para que esten una debajo de la otra*/
+    height: 255px; /*se coloca un alto establecido para poder delimitar el elemento a ese espacio */
+    flex-wrap: wrap;/*y con "wrap" se logra que despues de llegar al espacio establecido, se quiebre la columna en este caso, y la continue en la siguiente seccion */
 }
-*/
+
 .rodapePrincipal-patrocinadores .container{
 
 display:flex;
