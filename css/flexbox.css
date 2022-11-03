@@ -32,11 +32,21 @@
 .contenidoPrincipal-cursos-link{
 
     display: flex;
-    width: 23%;
+    width: 23%; /* se coloca 23% para darle chance al margen*/
    
 }
 
+.videoSobre-video{
 
+    display:flex ;
+    margin: auto;
+}
+
+.videoSobre-sobre{
+
+    justify-content: center;
+    display: grid;
+}
 .rodapePrincipal-navMap-list{
 
     display: flex;
@@ -68,4 +78,18 @@ justify-content: space-between;
 .rodapePrincipal-contatoForm-fieldset{
 
     display: flex;/* aqui se utilizo para poder poner el boton de enviar delado de la barra buscadora*/
+}
+
+/*responsive*/
+
+.headerPrincipal .container{
+
+    flex-direction: column;
+    align-items: initial;
+    text-align: center;
+}
+
+.headerPrincipal-nav{
+
+    flex-direction: column;
 }
