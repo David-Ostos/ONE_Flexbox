@@ -1,14 +1,17 @@
-.headerPrincipal .container{
-
+.headerPrincipal .container {
     display: flex;
-    align-items: center; /*para alinear los intens en flex*/
-    justify-content: space-between; /* "space-between" significa espacios entre */
+    align-items: center;
+    /*para alinear los intens en flex*/
+    justify-content: space-between;
+    /* "space-between" significa espacios entre */
 }
+
 /*
 .headerPrincipal-titulo{
 
     display: inline-block;
-    vertical-align: middle; /* alinear al medio*//*
+    vertical-align: middle; /* alinear al medio*/
+/*
 }
 
 .headerPrincipal-nav{
@@ -17,79 +20,141 @@
     vertical-align: middle;
 }*/
 
-.headerPrincipal-nav{
-
+.headerPrincipal-nav {
     display: flex;
 }
-.contenidoPrincipal-cursos{
 
+.contenidoPrincipal-cursos {
     display: flex;
 
     flex-wrap: wrap;
-
 }
 
-.contenidoPrincipal-cursos-link{
-
+.contenidoPrincipal-cursos-link {
     display: flex;
-    width: 23%; /* se coloca 23% para darle chance al margen*/
-   
+    width: 23%;
+    /* se coloca 23% para darle chance al margen*/
 }
 
-.videoSobre-video{
-
-    display:flex ;
-    margin: auto;
-}
-
-.videoSobre-sobre{
-
-    justify-content: center;
-    display: grid;
-}
-.rodapePrincipal-navMap-list{
-
+.videoSobre .container {
     display: flex;
-    flex-direction: column; /*con la fumcion "flex-direction" se optiene la direccion en la que va a ir los elementos si es en columnas o filas, entre otros... en este caso se utilizo "column" para que esten una debajo de la otra*/
-    height: 255px; /*se coloca un alto establecido para poder delimitar el elemento a ese espacio */
-    flex-wrap: wrap;/*y con "wrap" se logra que despues de llegar al espacio establecido, se quiebre la columna en este caso, y la continue en la siguiente seccion */
+    justify-content: space-around;
 }
 
-.rodapePrincipal-patrocinadores .container{
-
-display:flex;
-justify-content: space-between;
-}
-
-.rodapePrincipal-patrocinadores-list{
-
+.videoSobre-sobre {
     display: flex;
-    align-items: center;/* se utiliza paracentrar los elementos*/
-    justify-content: space-around;/* "around" es para jsutificar el espacio alrededor de los items la diferencia entre between es que es que comienza desde los bordes y "around mantiene el espacio igual de todos los angulos */
-    width: 70%; /*aqui se coloco el espacio de la parte de los patrocianntes para poder proporcionar su espacio y quede separado en este caso porque hay 2 elementos en la misma linea*/
-    margin: 0 5% 0 0; /* se coloca el margen para la separacion entre elementos*/
+    flex-direction: column;
+    text-align: center;
 }
 
-.rodapePrincipal-contatoForm{
+.videoSobre-video {
 
-    width: 25%; /*este es el espacio faltante para la totalidad del 100% referente con el anterior elemento*/
+    flex-grow: 0.5;
 }
 
-.rodapePrincipal-contatoForm-fieldset{
+.videoSobre-sobre-list {
+    flex-grow: 2;
+    flex-shrink: 2;
+}
 
-    display: flex;/* aqui se utilizo para poder poner el boton de enviar delado de la barra buscadora*/
+.rodapePrincipal-navMap-list {
+    display: flex;
+    flex-direction: column;
+    /*con la fumcion "flex-direction" se optiene la direccion en la que va a ir los elementos si es en columnas o filas, entre otros... en este caso se utilizo "column" para que esten una debajo de la otra*/
+    height: 255px;
+    /*se coloca un alto establecido para poder delimitar el elemento a ese espacio */
+    flex-wrap: wrap;
+    /*y con "wrap" se logra que despues de llegar al espacio establecido, se quiebre la columna en este caso, y la continue en la siguiente seccion */
+}
+
+.rodapePrincipal-patrocinadores .container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.rodapePrincipal-patrocinadores-list {
+    display: flex;
+    align-items: center;
+    /* se utiliza paracentrar los elementos*/
+    justify-content: space-around;
+    /* "around" es para jsutificar el espacio alrededor de los items la diferencia entre between es que es que comienza desde los bordes y "around mantiene el espacio igual de todos los angulos */
+    width: 70%;
+    /*aqui se coloco el espacio de la parte de los patrocianntes para poder proporcionar su espacio y quede separado en este caso porque hay 2 elementos en la misma linea*/
+    margin: 0 5% 0 0;
+    /* se coloca el margen para la separacion entre elementos*/
+}
+
+.rodapePrincipal-contatoForm {
+    width: 25%;
+    /*este es el espacio faltante para la totalidad del 100% referente con el anterior elemento*/
+}
+
+.rodapePrincipal-contatoForm-fieldset {
+    display: flex;
+    /* aqui se utilizo para poder poner el boton de enviar delado de la barra buscadora*/
 }
 
 /*responsive*/
 
-.headerPrincipal .container{
+@media (max-width: 768px) {
 
-    flex-direction: column;
-    align-items: initial;
-    text-align: center;
-}
+    .headerPrincipal-nav-link-app {
 
-.headerPrincipal-nav{
+        order: -1;
+        /* la funcion order nos ayuda a poder enumerar los items de la manera deseada en este caso se pone el enunciado app home de primero en el modo mobile*/
+    }
 
-    flex-direction: column;
+    .headerPrincipal .container {
+        flex-direction: column;
+        align-items: initial;
+        text-align: center;
+    }
+
+    .headerPrincipal-nav {
+        flex-direction: column;
+    }
+
+    .contenidoPrincipal-cursos {
+        flex-direction: column;
+        /* para direccionarlos en columnas*/
+    }
+
+    .contenidoPrincipal-cursos-link {
+        width: 100%;
+        /* para que los itens tengan el tamaño completo*/
+    }
+
+    .rodapePrincipal-navMap-list {
+        height: auto;
+        /* le quitamos la altura fija del modo escritorio*/
+        flex-wrap: nowrap;
+        /* para quitar el quiebre automatico ya que en mobile no hace falta*/
+    }
+
+    .rodapePrincipal-patrocinadores .container {
+        flex-direction: column;
+    }
+
+    .rodapePrincipal-contatoForm {
+        width: 100%;
+    }
+
+    .rodapePrincipal-patrocinadores-list {
+        align-items: center;
+        width: 100%;
+        margin: 0;
+    }
+
+    .rodapePrincipal-contatoForm-fieldset {
+        justify-content: center;
+    }
+
+    .videoSobre .container {
+
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+
 }
